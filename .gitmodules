@@ -1,0 +1,3 @@
+[submodule "platin/src"]
+	path = platin/src
+	url = https://github.com/drakhov/proyecto-platin
