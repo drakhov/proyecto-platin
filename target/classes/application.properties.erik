@@ -1,0 +1,107 @@
+#Base de Datos credentials
+#spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=platin
+#spring.datasource.username=sa
+#spring.datasource.password=123
+#spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+#spring.jpa.database-platform=org.hibernate.dialect.SQLServer2012Dialect
+
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/platin?createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name =com.mysql.jdbc.Driver
+spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+#spring.jpa.show-sql: true
+
+spring.jpa.show-sql = false
+
+spring.jpa.hibernate.ddl-auto = update
+
+#Base de Datos AutoReconectar
+spring.datasource.Tomcat.test-on-borrow=true
+spring.datasource.Tomcat.validation-query=SELECT 1
+spring.datasource.Tomcat.validation-interval=0
+
+#JWT credentials
+jwt.secret = secretplatinAassffswert123423fds
+token_time_alive = 14400000
+
+#Producer NSQ credentials
+nsq.topicIngest=ingestTrama
+nsq.topicSpedd=reportSpeed
+nsq.topicTravels=reportTravels
+nsq.topicTrassmision=reportTrassmision
+nsq.topicTimeLag=reportTimeLag
+nsq.ReportTopic=reports
+nsq.address=127.0.0.1
+nsq.port=4150
+
+#consumer NSQ credentials
+nsq.thread.count = 2
+nsq.produce.host=127.0.0.1
+nsq.produce.port=4161
+nsq.lookup.host=127.0.0.1
+nsq.lookup.port=4150
+
+#Redis credentials
+spring.redis.host=localhost
+spring.redis.port=6379
+
+#WebSocketReport File
+xls.path=C:/Report/Excel
+geojson.path=C:/Report/GeoJson
+url.map=http://www.osinergmin.geosatelital.com/mapa/?file=
+
+spring.main.allow-bean-definition-overriding=true
+server.port=8070
+token.Internal=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnZW9zYXRlbGl0YWwuY29tLnBlIiwicm9sZXMiOltdLCJpYXQiOjE2MzQxNDA2ODh9.XrqdBgJGOTkBCObnsuJ3P-QCfs7dnG1SDqsHGCFE2QRlQa_k4oCR7AS8mfnFh0HF7BJWQITnKyJfpQKyFIRv8Q
+
+
+# mail config
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=geosatelitalplatin@gmail.com
+spring.mail.password=nudevqxysqihrjvy
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.ssl.trust=smtp.gmail.com
+
+mail.urlFront=http://localhost:4200/change-password/
+
+#Messages Password
+HISTORY_VIOLATION=Password matches one of %1$s previous passwords.
+ILLEGAL_WORD=Password contains the dictionary word '%1$s'.
+ILLEGAL_WORD_REVERSED=Password contains the reversed dictionary word '%1$s'.
+ILLEGAL_DIGEST_WORD=Password contains a dictionary word.
+ILLEGAL_DIGEST_WORD_REVERSED=Password contains a reversed dictionary word.
+ILLEGAL_MATCH=Password matches the illegal pattern '%1$s'.
+ALLOWED_MATCH=Password must match pattern '%1$s'.
+ILLEGAL_CHAR=Password %2$s the illegal character '%1$s'.
+ALLOWED_CHAR=Password %2$s the illegal character '%1$s'.
+ILLEGAL_QWERTY_SEQUENCE=Password contains the illegal QWERTY sequence '%1$s'.
+ILLEGAL_ALPHABETICAL_SEQUENCE=Password contains the illegal alphabetical sequence '%1$s'.
+ILLEGAL_NUMERICAL_SEQUENCE=Password contains the illegal numerical sequence '%1$s'.
+ILLEGAL_USERNAME=Password %2$s the user id '%1$s'.
+ILLEGAL_USERNAME_REVERSED=Password %2$s the user id '%1$s' in reverse.
+ILLEGAL_WHITESPACE=Password %2$s a whitespace character.
+ILLEGAL_NUMBER_RANGE=Password %2$s the number '%1$s'.
+ILLEGAL_REPEATED_CHARS=Password contains %3$s sequences of %1$s or more repeated characters, but only %2$s allowed: %4$s.
+INSUFFICIENT_UPPERCASE=Password must contain %1$s or more uppercase characters.
+INSUFFICIENT_LOWERCASE=Password must contain %1$s or more lowercase characters.
+INSUFFICIENT_ALPHABETICAL=Password must contain %1$s or more alphabetical characters.
+INSUFFICIENT_DIGIT=Password must contain %1$s or more digit characters.
+INSUFFICIENT_SPECIAL=Password must contain %1$s or more special characters.
+INSUFFICIENT_CHARACTERISTICS=Password matches %1$s of %3$s character rules, but %2$s are required.
+INSUFFICIENT_COMPLEXITY=Password meets %2$s complexity rules, but %3$s are required.
+INSUFFICIENT_COMPLEXITY_RULES=No rules have been configured for a password of length %1$s.
+SOURCE_VIOLATION=Password cannot be the same as your %1$s password.
+TOO_LONG=Password must be no more than %2$s characters in length.
+TOO_SHORT=Password must be %1$s or more characters in length.
+TOO_MANY_OCCURRENCES=Password contains %2$s occurrences of the character '%1$s', but at most %3$s are allowed.
+
+
+#NOMINATIN'S URI
+rest.uri.nominatin=https://nominatim.openstreetmap.org/reverse?lat=
+
+
+time.lag=600000

@@ -1,0 +1,12 @@
+PUT http://localhost:8070/api/v1/vehicle/{{id}}
+
+###
+
+PUT http://localhost:8070/api/v1/vehicle/{{id}}
+
+###
+
+PUT http://localhost:8070/api/v1/vehicle/{{id}}
+
+###
+
