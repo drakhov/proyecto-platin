@@ -1,0 +1,10 @@
+
+docker run --name redis -itd -p 6379:6379 redis
+docker run -itd --name nsqlookupd -p 4160:4160 -p 4161:4161 nsqio/nsq /nsqlookupd
+local ip: 192.168.0.130
+docker run -itd --name nsqd -p 4150:4150 -p 4151:4151 \
+    nsqio/nsq /nsqd \
+    --broadcast-address=192.168.0.130 \
+    --lookupd-tcp-address=192.168.0.130:4160
+docker run -itd --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -d mysql:5 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
